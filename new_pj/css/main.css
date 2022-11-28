@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.popup .ovrelay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 28%);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 350px;
+  text-align: center;
+  padding: 14px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0px 0px 26px -9px black inset;
+  z-index: 2;
+}
+.popup .close-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e71515;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+}
+
+.popup.active .ovrelay {
+  display: block;
+}
+.popup.active .content {
+  transition: all 100ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
